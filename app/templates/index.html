@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>General News</h2>
+        <ul>
+            {{macro.displayNews(general)}}
+        </ul>
+    </div>
+</div>
+
+    
+
+       <h2>Sports News</h2>
+       <ul>
+        {{macro.displayNews(sports)}}
+    </ul>
+
+       <h2>Technology News</h2>
+        <ul>
+            {{macro.displayNews(technology)}}
+        </ul>
+
+        <h2>Science News</h2>
+        <ul>
+            {{macro.displayNews(science)}}
+        </ul>
+
+{% endblock %}
