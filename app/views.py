@@ -14,3 +14,15 @@ def index():
     
     title = 'Best News Site Worldwide'
     return render_template('index.html', title = title, general = general_news, sports= sports_news, technology=technology_news, science=science_news)
+
+
+
+
+@app.route('/news/<int:title>')
+def news(title):
+    '''view on news page'''
+    article = get_articles('trending')
+    title = 'Best News Site Worldwide'
+
+
+    return render_template('news.html', title = title, article = article)
