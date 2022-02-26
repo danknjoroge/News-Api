@@ -49,3 +49,17 @@ def process_results(news_list):
         news_results.append(news_object)
     return news_results
 
+
+def get_articles(title):
+    article_url = article_base_url.format(title ,apiKey)
+    with urllib.request.urlopen(article_url) as url:
+        article_details = url.read()
+        article_response = json.loads(article_details)
+
+        article_results= None
+
+        if article_response['articles']:
+            article_results_list = article_response['articles']
+            article_results = process_result(article_results_list)
+
+    return article_results
