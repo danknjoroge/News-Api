@@ -77,22 +77,6 @@ def process_result(article_list):
         urlToImage = articles.get('urlToImage')
         publishedAt = articles.get('publishedAt')
         content = articles.get('content')
-
-
-
-
-
-        #  article_object = []
-        # if article_response:
-        #     author = article_response('author')
-        #     title = article_response('title')
-        #     description = article_response('description')
-        #     url = article_response('url')
-        #     urlToImage = article_response('urlToImage')
-        #     publishedAt = article_response('publishedAt')
-        #     content = article_response('content')
-        #     # 
-        # article_object = []
         
         article_object = Article(author,title,  description, url, urlToImage, publishedAt, content)
         article_results.append(article_object)
