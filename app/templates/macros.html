@@ -13,12 +13,12 @@
 
 {% macro displayArticles(articles_list) %}
     {% for article in articles_list %}
-        
+        <div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;"></div>
             <img class="img-responsive" src="{{article.urlToImage}}" alt="image">
             <h4>{{article.title}}</h4>
             <p>{{article.description}}</p>
             <p>Created: {{article.publishedAt}}</p>
-            <a href="{{article.url}}" class="btn btn-success">Read Full Story</a>
-        
+            <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
+        </div>
     {% endfor %}
 {% endmacro %}
