@@ -1,0 +1,24 @@
+{% macro displayNews(news_list) %}
+
+    {% for news in news_list %}
+        <p>{{ news.name}}</p>
+        <p> {{news.description }} </p>
+        <a href="/index/{{news.url}}"> See Articles on Site</a>
+
+    {% endfor %}
+
+
+
+{% endmacro %}
+
+{% macro displayArticles(articles_list) %}
+    {% for article in articles_list %}
+        
+            <img class="img-responsive" src="{{article.urlToImage}}" alt="image">
+            <h4>{{article.title}}</h4>
+            <p>{{article.description}}</p>
+            <p>Created: {{article.publishedAt}}</p>
+            <a href="{{article.url}}" class="btn btn-success">Read Full Story</a>
+        
+    {% endfor %}
+{% endmacro %}
