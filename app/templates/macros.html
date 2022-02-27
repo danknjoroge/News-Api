@@ -1,24 +1,40 @@
 {% macro displayNews(news_list) %}
 
     {% for news in news_list %}
-        <p>{{ news.name}}</p>
-        <p> {{news.description }} </p>
-        <a href="/index/{{news.url}}"> See Articles on Site</a>
+        <div class="bg-warning my-5" style="background-color: aqua; margin: 54px;">
+            <p>{{ news.name}}</p>
+            <p> {{news.description }} </p>
+            <a href="/news/{{news.id}}"> Visit the news Site</a>
 
+        </div>
     {% endfor %}
 
 
 
 {% endmacro %}
-
+<!-- 
 {% macro displayArticles(articles_list) %}
     {% for article in articles_list %}
-        <div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;"></div>
-            <img class="img-responsive" src="{{article.urlToImage}}" alt="image">
+
+    <div class="container bg-primary d-flex justify-content-around" style="width: 78rem; padding-bottom: 50px" >
+        <img class="img-responsive" src="{{article.urlToImage}}" alt="image" >
+        <div class="">
+          <p class="card-text"><h4>{{article.title}}</h4></p>
+          <p>{{article.description}}</p>
+          <p>Created: {{article.publishedAt}}</p>
+          <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
+     
+        </div>
+    </div>
+
+
+    
+        <!-- <div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;">
+            <img class="img-responsive" src="{{article.urlToImage}}" alt="image" width="100px" height="100px">
             <h4>{{article.title}}</h4>
             <p>{{article.description}}</p>
             <p>Created: {{article.publishedAt}}</p>
             <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
-        </div>
+        </div> -->
     {% endfor %}
-{% endmacro %}
+{% endmacro %} -->

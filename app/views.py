@@ -16,13 +16,12 @@ def index():
     return render_template('index.html', title = title, general = general_news, sports= sports_news, technology=technology_news, science=science_news)
 
 
-
-
-@app.route('/news/<int:title>')
-def news(title):
+@app.route('/articles/<source_id>')
+def news(source_id):
     '''view on news page'''
-    article = get_articles('trending')
-    title = 'Best News Site Worldwide'
+    article_source = get_articles('trending')
+    title = f'{source_id} |Articles'
 
+    return render_template('news.html',title = title, name = source_id, articles = article_source )
 
-    return render_template('news.html', title = title, article = article)
+    # return render_template('news.html', title = title, article = article)

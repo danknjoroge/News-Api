@@ -1,8 +1,26 @@
 {% extends 'base.html'%}
-{% import 'macros.html' as macro %}
 
-{% block content%}
-     <div>
-         {{macro.displayArticles(article)}}
-     </div>
-{% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid">
+    <div class="row">
+        {% for article in articles %}
+        <div class="col-md-4">
+                <div class="thumbnail">
+                    <div class="details">
+                        <h4>{{article.description | truncate(100)}}</h4>
+                        <a href="{{article.url}}" target="_blank"> Read Full article </a>
+                        <p>Posted on : {{article.publishedAt}}</p>
+                    </div>
+                    <a>
+                    <img src="{{article.urlToImage}}" class="img-responsive" styles="height:20px">
+                    </a>
+                    
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}
