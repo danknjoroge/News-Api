@@ -3,8 +3,8 @@
 
 
 {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 
 
@@ -14,29 +14,29 @@
 
 
 <div class="container">
-    
-        <h2 >General News</h2>
-        <ul>
-            {{macro.displayNews(general)}}
-        </ul>
-   
+
+    <h2>General News</h2>
+    <p>
+        {{macro.displayNews(general)}}
+    </p>
+
 
 
 
     <h2 style>Sports News</h2>
-    <ul>
+    <p>
         {{macro.displayNews(sports)}}
-    </ul>
+    </p>
 
     <h2>Technology News</h2>
-    <ul>
+    <p>
         {{macro.displayNews(technology)}}
-    </ul>
+    </p>
 
     <h2>Science News</h2>
-    <ul>
+    <p>
         {{macro.displayNews(science)}}
-    </ul>
+    </p>
 </div>
 
 {% endblock %}

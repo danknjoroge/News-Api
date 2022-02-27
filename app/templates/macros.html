@@ -12,11 +12,11 @@
     <div class="container-fluid">
         <div class="row">
             {% for news in news_list %}
-            <div class="col-md-4">
+            <div class="col-md-4 card">
                     <div class="thumbnail">
                         <div class="details">
-                            <p>{{ news.name}}</p>
-                            <h4>{{news.description | truncate(100)}}</h4>
+                            <h3>{{ news.name}}</h3>
+                            <p>{{news.description | truncate(100)}}</p>
                             <a href="/news/{{news.id}}" target="_blank"> Read Articles on Site </a>
                             
                         </div>
