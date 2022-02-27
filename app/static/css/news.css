@@ -8,3 +8,9 @@
 body{
     background-color: rgb(85, 107, 107);
 }
+h2{
+    font-weight: bold;
+}
+.post{
+    font-weight: bold;
+}
