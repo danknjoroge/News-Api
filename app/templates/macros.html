@@ -1,6 +1,6 @@
 {% macro displayNews(news_list) %}
 
-    <!-- {% for news in news_list %}
+<!-- {% for news in news_list %}
         <div class="bg-warning my-5" style="background-color: aqua; margin: 54px;">
             <p>{{ news.name}}</p>
             <p> {{news.description }} </p>
@@ -9,24 +9,21 @@
         </div>
     {% endfor %} -->
 
-    <div class="container-fluid">
-        <div class="row">
-            {% for news in news_list %}
-            <div class="col-md-4 card">
-                    <div class="thumbnail">
-                        <div class="details">
-                            <h3>{{ news.name}}</h3>
-                            <p>{{news.description | truncate(100)}}</p>
-                            <a href="/news/{{news.id}}" target="_blank"> Read Articles on Site </a>
-                            
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            {% endfor %}
+<div class="container-fluid">
+    <div class="row">
+        {% for news in news_list %}
+        <div class="col-md-4 card">
+            <div class="thumbnail">
+
+                <h3>{{ news.name}}</h3>
+                <p>{{news.description | truncate(100)}}</p>
+                <a href="/news/{{news.id}}" target="_blank"> Read Articles on Site </a>
+            
+            </div>
         </div>
+        {% endfor %}
     </div>
+</div>
 
 
 
@@ -55,5 +52,5 @@
             <p>Created: {{article.publishedAt}}</p>
             <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
         </div> -->
-    {% endfor %}
+{% endfor %}
 {% endmacro %} -->

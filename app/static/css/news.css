@@ -1,8 +1,9 @@
 .anch{
     text-decoration: none;
-    background-color: orangered;
-    color: white;
+    color:orangered;
     font-weight: bold;
+    height: 21px;
+    width: 21px;
 }
 body{
     background-color: rgb(85, 107, 107);
