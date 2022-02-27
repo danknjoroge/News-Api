@@ -20,7 +20,7 @@ def index():
 @app.route('/news/<source_id>')
 def news(source_id):
     '''view on news page'''
-    article_source = get_articles('trending')
+    article_source = get_articles('sources')
     title = f'{source_id} Articles'
 
     return render_template('news.html',title = title, name = source_id, articles = article_source )
