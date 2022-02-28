@@ -78,6 +78,7 @@ def process_result(article_list):
         publishedAt = articles.get('publishedAt')
         content = articles.get('content')
         
+        
         article_object = Article(author,title,  description, url, urlToImage, publishedAt, content)
         article_results.append(article_object)
     return article_results

@@ -1,21 +1,13 @@
 {% macro displayNews(news_list) %}
 
-<!-- {% for news in news_list %}
-        <div class="bg-warning my-5" style="background-color: aqua; margin: 54px;">
-            <p>{{ news.name}}</p>
-            <p> {{news.description }} </p>
-            <a href="/news/{{news.id}}"> Visit the news Site</a>
 
-        </div>
-    {% endfor %} -->
 
 <div class="container-fluid">
     <div class="row">
         {% for news in news_list %}
         <div class="col-md-4 card">
             <div class="thumbnail">
-
-                <h3>{{ news.name}}</h3>
+                <a href="{{news.url}}" target="_blank">{{ news.name}}</a>
                 <p>{{news.description | truncate(100)}}</p>
                 <a href="/news/{{news.id}}" target="_blank"> Read Articles on Site </a>
             
@@ -28,29 +20,9 @@
 
 
 {% endmacro %}
-<!-- 
-{% macro displayArticles(articles_list) %}
-    {% for article in articles_list %}
 
-    <div class="container bg-primary d-flex justify-content-around" style="width: 78rem; padding-bottom: 50px" >
-        <img class="img-responsive" src="{{article.urlToImage}}" alt="image" >
-        <div class="">
-          <p class="card-text"><h4>{{article.title}}</h4></p>
-          <p>{{article.description}}</p>
-          <p>Created: {{article.publishedAt}}</p>
-          <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
-     
-        </div>
-    </div>
 
 
     
-        <!-- <div style="display: flex; flex-wrap: wrap; padding-bottom: 50px;">
-            <img class="img-responsive" src="{{article.urlToImage}}" alt="image" width="100px" height="100px">
-            <h4>{{article.title}}</h4>
-            <p>{{article.description}}</p>
-            <p>Created: {{article.publishedAt}}</p>
-            <a href="{{article.url}}" class="btn btn-warning">Read Full Story</a>
-        </div> -->
-{% endfor %}
-{% endmacro %} -->
+
+  
