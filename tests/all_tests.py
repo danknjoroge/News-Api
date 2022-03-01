@@ -1,8 +1,5 @@
 import unittest
-from app.models import news,articles
-
-News = news.News
-Article = articles.Article
+from app.models import News,Article
 
 class TestNews(unittest.TestCase):
     '''tests behaviours of news class'''
@@ -44,5 +41,3 @@ class TestArticle(unittest.TestCase):
         self.assertEqual(self.new_articles.publishedAt,12/21/21)
         self.assertEqual(self.new_articles.content, 'amazing')
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)

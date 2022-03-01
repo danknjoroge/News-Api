@@ -1,9 +1,9 @@
-from flask import render_template
-from app import app
-from .request import get_articles, get_news
+from flask import render_template, request, redirect,url_for
+from . import main
+from ..requests import get_articles, get_news
 
-#view
-@app.route('/')
+#views
+@main.route('/')
 def index():
     '''view that returns index page'''
     general_news = get_news('general')
@@ -17,7 +17,7 @@ def index():
 
 
 
-@app.route('/news/<source_id>')
+@main.route('/news/<source_id>')
 def news(source_id):
     '''view on news page'''
     article_source = get_articles('general')
