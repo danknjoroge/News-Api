@@ -17,6 +17,9 @@ It's a news application that allows one to see the various news sources in vario
   + ./manage.py
 * The application will run in terminal and you will follow the url provided in terminal for you to be able to view the  news on the News-App.
 
+## Live link
+* You can see the app from the following live link: https://news-app-dan.herokuapp.com/
+
 ## Technologies and Software Used
 * Python Flask
 * Visual Studio Code
