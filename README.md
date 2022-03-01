@@ -24,6 +24,7 @@ It's a news application that allows one to see the various news sources in vario
 * Python Flask
 * Visual Studio Code
 
+
 ## Known Issues and Bugs
 No know bugs at the time of deployment
 
